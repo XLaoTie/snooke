@@ -118,7 +118,7 @@ match_detail: [{
             's_first_score'=>$v['F_FRAMEB'],
             's_second_score'=>$v['F_SCOREB'],
             's_third_score'=>$v['F_BREAKB'],  
-            'state'=>($v['F_GAMEUP']==1) ? "结束" : ""
+            'state'=>($v['F_GAMEUP']==0) ? "结束" : ""
           );
         };
         return array('code'=>'0','msg'=>'正常','data'=>$r1);

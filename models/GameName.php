@@ -72,4 +72,5 @@ class GameName extends BaseModel {
         $rs1=toIoArray($tmp,'F_ID:id,F_GAMEID,F_GAMECODE:status,F_GAMENAME:match_name,F_GAMEDATE:match_time,F_GAMEMODE,F_ADDRESS,F_GAMEDEPARTMENT');
         return array('code'=>'0','msg'=>'正常','data'=>$rs1);
     }
-}
+
+    }

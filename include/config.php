@@ -1,8 +1,8 @@
 <?php
-$db_host='127.0.0.1';
+$db_host='129.211.33.27';
 $db_name="game2020";
 $db_user="root";
-$db_pass='123456';
+$db_pass='xtz3.1415926535';
 
 Yii::setPathOfAlias('rootpath', ROOT_PATH);
 return array(

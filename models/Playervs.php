@@ -16,7 +16,7 @@ class Playervs extends BaseModel {
  $w1.='f_win1,f_win2,f_LOST1,f_LOST2,F_GAMEING,f_treecode,F_WINNUM,F_GTYPE,F_POINTS,';
  $w1.='F_innings,F_CLEARANCE,F_GTIME,F_CHECK,F_CHECK2, F_WINTYPE';
         return array(
-            array('F_GAMECODE', 'required', 'message' => '{attribute} 不能为空'),
+
          	array($w1,'safe',), 
 			//array($s1,'safe'),
 		);
@@ -84,16 +84,6 @@ match_detail: [{
      //   'id'=>1,'match_time'=>'09-12','match_name'=>'广州巡逻赛','status'=>'开始')
         $criteria->condition="F_GGAMEID='".$id."' and F_TABLENO<>' ' AND F_GAME>0";
         $tmp=$this->findAll($criteria);
-
- $w1='f_VSid:id,F_GGAMEID,F_GROUP,F_GMAINXH,F_GAMENAME,f_roundcode,F_GAME,F_XH,F_GAMEUP,F_GAMEUPOLD,';
- $w1.='F_GROUPNAME,F_ORDER,f_gamecode,f_date,f_time,F_TABLENO:desktop,F_CHOSE,';
- $w1.='F_PLAYNAMEA1:first_player,f_termA:f_flag,F_FRAMEA:f_first_score,F_SCOREA:f_first_score,F_BREAKA:f_third_score,';
- $w1.='f_pLaynameB1:second_player,f_termB:s_flag,F_FRAMEB:s_first_score,F_SCOREB:s_first_score,F_BREAKB:s_third_score,';
- $w1.='f_termB:s_flag,F_WINS,F_XHA,F_XHB,';
- $w1.='f_win1,f_win2,f_LOST1,f_LOST2,F_GAMEING,f_treecode,F_WINNUM,F_GTYPE,F_POINTS,';
- $w1.='F_innings,F_CLEARANCE,F_GTIME,F_CHECK,F_CHECK2';
-
-
  $r1=array();$r0=array();
     foreach($tmp as $k => $v){
         $type=$v['F_GAME'];
@@ -111,18 +101,42 @@ match_detail: [{
             'f_second_score'=>$v['F_SCOREA'],
             'f_third_score'=>$v['F_BREAKA'],
              'all_score'=>$v['F_WINNUM'],
-
             'S_flag'=>$v['f_termB'],
-             
             'second_player'=>$v['f_pLaynameB1'],
             's_first_score'=>$v['F_FRAMEB'],
             's_second_score'=>$v['F_SCOREB'],
             's_third_score'=>$v['F_BREAKB'],  
-            'state'=>($v['F_GAMEUP']==1) ? "结束" : ""
+            'state'=>($v['F_GAMEUP']==0) ? "结束" : ""
           );
         };
         return array('code'=>'0','msg'=>'正常','data'=>$r1);
     }
+      public function getPlayer() {
+        	$criteria = new CDbCriteria;
+         //   'id'=>1,'match_time'=>'09-12','match_name'=>'广州巡逻赛','status'=>'开始')
+            $criteria->condition="F_TABLENO<>' ' AND F_GAME>0 AND F_GAMEUP<>0" ;
+            $tmp=$this->find($criteria);
+            $r1=array();
+            $v=$tmp;
+                $type=$v['F_GAME'];
+
+
+                $r1['game_name']=$v['F_GAMENAME'];
+                $r1['desktop']=$v['F_TABLENO'];
+                $r1['f_flag']=$v['f_termA'];
+                $r1['first_player']=$v['F_PLAYNAMEA1'];
+                $r1['f_first_score']=$v['F_FRAMEA'];
+                $r1['f_second_score']=$v['F_SCOREA'];
+                $r1['f_third_score']=$v['F_BREAKA'];
+                 $r1['all_score']=$v['F_WINNUM'];
+                $r1['s_flag']=$v['f_termB'];
+                $r1['second_player']=$v['f_pLaynameB1'];
+                $r1['s_first_score']=$v['F_FRAMEB'];
+                $r1['s_second_score']=$v['F_SCOREB'];
+                $r1['s_third_score']=$v['F_BREAKB'];
+
+            return array('code'=>'0','msg'=>'正常','data'=>$r1);
+        }
 }
 
 

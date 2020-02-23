@@ -45,7 +45,11 @@ class MatchController extends BaseController {
         $rs=Playervs::model()-> getPlayers($id);     
         echo json_encode($rs);
     }
+    public function actionGetmatchdata(){
+        $data=Playervs::model()->getPlayer();
+        echo json_encode($data);
 
+    }
  function   get_gb_to_utf8($value){
   $value_1= $value;
   $value_2   =   @iconv( "gb2312", "utf-8//IGNORE",$value_1);
@@ -97,7 +101,9 @@ class MatchController extends BaseController {
     }
 
     public function actionUpdateGameScore($data) {
+     $data=array();
      $data=$this-> getPostData($data);//转换数据
+     put_msg($data);
      $w1='F_GGAMEID ='.$data['F_GGAMEID'].' and F_GAME ='.$data['F_GAME'].' and F_XH ='.$data['F_XH'];
      $tmp1=Playervs::model()->find($w1);
      if(empty($tmp1)){
@@ -113,11 +119,35 @@ class MatchController extends BaseController {
       unset($tmp1->f_VSid);
       $tmp1->attributes=$data;
       $s1=$tmp1->save();
-     
-
        echo json_encode(array('code'=>'0','msg'=>'ok'));
      }
+    public function actionSubmitBreak(){
+       $post=file_get_contents("php://input");
+        $json=json_decode($post,true);
+        put_msg($json);
+       $matchesInfo=Playervs::model()->find("F_TABLENO<>' ' AND F_GAME>0 AND F_GAMEUP<>0");
 
+       $matchesInfo->F_SCOREA = $json['F_SCOREA'];
+       $matchesInfo->F_SCOREB = $json['F_SCOREB'];
+       $matchesInfo->F_BREAKA = $json['F_BREAKA'];
+       $matchesInfo->F_BREAKB = $json['F_BREAKB'];
+       $status=$matchesInfo->save();
+
+    }
+    public function actionSubmitFrame(){
+           $post=file_get_contents("php://input");
+            $json=json_decode($post,true);
+            put_msg($json);
+           $matchesInfo=Playervs::model()->find("F_TABLENO<>' ' AND F_GAME>0 AND F_GAMEUP<>0");
+           $matchesInfo->F_FRAMEA = $json['F_FRAMEA'];
+           $matchesInfo->F_FRAMEB = $json['F_FRAMEB'];
+           $matchesInfo->F_SCOREA = 0;
+           $matchesInfo->F_SCOREB = 0;
+           $matchesInfo->F_BREAKA = 0;
+           $matchesInfo->F_BREAKB = 0;
+           $status=$matchesInfo->save();
+
+        }
 
     public function actiongetGameName() {
         
