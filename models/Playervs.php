@@ -94,7 +94,9 @@ match_detail: [{
          } 
       //   put_msg($v);
         $r1[$type]['match_detail'][]=
-           array('desktop'=>$v['F_TABLENO'],
+           array(
+            'vs_id'=>$v['f_VSid'],
+            'desktop'=>$v['F_TABLENO'],
             'f_flag'=>$v['f_termA'],
             'first_player'=>$v['F_PLAYNAMEA1'],
             'f_first_score'=>$v['F_FRAMEA'],
@@ -106,7 +108,8 @@ match_detail: [{
             's_first_score'=>$v['F_FRAMEB'],
             's_second_score'=>$v['F_SCOREB'],
             's_third_score'=>$v['F_BREAKB'],  
-            'state'=>($v['F_GAMEUP']==0) ? "结束" : ""
+            'state'=>($v['F_GAMEUP']==0) ? "结束" : "进行中..",
+
           );
         };
         return array('code'=>'0','msg'=>'正常','data'=>$r1);
@@ -134,7 +137,29 @@ match_detail: [{
                 $r1['s_first_score']=$v['F_FRAMEB'];
                 $r1['s_second_score']=$v['F_SCOREB'];
                 $r1['s_third_score']=$v['F_BREAKB'];
-
+            return array('code'=>'0','msg'=>'正常','data'=>$r1);
+        }
+      public function getPlayerByid($vs_id) {
+        	$criteria = new CDbCriteria;
+         //   'id'=>1,'match_time'=>'09-12','match_name'=>'广州巡逻赛','status'=>'开始')
+            $criteria->condition="F_TABLENO<>' ' AND F_GAME>0 AND f_VSid=".$vs_id ;
+            $tmp=$this->find($criteria);
+            $r1=array();
+            $v=$tmp;
+                $type=$v['F_GAME'];
+                $r1['game_name']=$v['F_GAMENAME'];
+                $r1['desktop']=$v['F_TABLENO'];
+                $r1['f_flag']=$v['f_termA'];
+                $r1['first_player']=$v['F_PLAYNAMEA1'];
+                $r1['f_first_score']=$v['F_FRAMEA'];
+                $r1['f_second_score']=$v['F_SCOREA'];
+                $r1['f_third_score']=$v['F_BREAKA'];
+                 $r1['all_score']=$v['F_WINNUM'];
+                $r1['s_flag']=$v['f_termB'];
+                $r1['second_player']=$v['f_pLaynameB1'];
+                $r1['s_first_score']=$v['F_FRAMEB'];
+                $r1['s_second_score']=$v['F_SCOREB'];
+                $r1['s_third_score']=$v['F_BREAKB'];
             return array('code'=>'0','msg'=>'正常','data'=>$r1);
         }
 }

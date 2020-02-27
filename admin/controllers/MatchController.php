@@ -48,7 +48,10 @@ class MatchController extends BaseController {
     public function actionGetmatchdata(){
         $data=Playervs::model()->getPlayer();
         echo json_encode($data);
-
+    }
+    public function actionGetmatchdataByid($vs_id){
+            $data=Playervs::model()->getPlayerByid($vs_id);
+            echo json_encode($data);
     }
  function   get_gb_to_utf8($value){
   $value_1= $value;
@@ -139,14 +142,33 @@ class MatchController extends BaseController {
             $json=json_decode($post,true);
             put_msg($json);
            $matchesInfo=Playervs::model()->find("F_TABLENO<>' ' AND F_GAME>0 AND F_GAMEUP<>0");
+
            $matchesInfo->F_FRAMEA = $json['F_FRAMEA'];
            $matchesInfo->F_FRAMEB = $json['F_FRAMEB'];
+           if($json['F_FRAMEA']==$matchesInfo->F_WINNUM||$json['F_FRAMEB']==$matchesInfo->F_WINNUM){
+           $matchesInfo->F_GAMEUP=0;
+           }
            $matchesInfo->F_SCOREA = 0;
            $matchesInfo->F_SCOREB = 0;
            $matchesInfo->F_BREAKA = 0;
            $matchesInfo->F_BREAKB = 0;
            $status=$matchesInfo->save();
-
+        }
+    public function actionSubmitChange($vs_id){
+           $post=file_get_contents("php://input");
+            $json=json_decode($post,true);
+            put_msg($json);
+           $matchesInfo=Playervs::model()->find(" f_VSid=".$vs_id);
+           $matchesInfo->F_WINNUM = $json['all_score'];
+           $matchesInfo->F_PLAYNAMEA1 = $json['first_player'];
+           $matchesInfo->f_pLaynameB1 = $json['second_player'];
+           $matchesInfo->F_FRAMEA = $json['f_first_score'];
+           $matchesInfo->F_FRAMEB = $json['s_first_score'];
+           $matchesInfo->F_SCOREA = $json['f_second_score'];
+           $matchesInfo->F_SCOREB = $json['s_second_score'];
+           $matchesInfo->F_BREAKA = $json['f_third_score'];
+           $matchesInfo->F_BREAKB = $json['s_third_score'];
+           $status=$matchesInfo->save();
         }
 
     public function actiongetGameName() {

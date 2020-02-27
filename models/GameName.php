@@ -69,7 +69,7 @@ class GameName extends BaseModel {
         $criteria->order = 'F_GAMEDATE desc';
         $criteria->limit = 20;   
         $tmp=$this->findAll($criteria);
-        $rs1=toIoArray($tmp,'F_ID:id,F_GAMEID,F_GAMECODE:status,F_GAMENAME:match_name,F_GAMEDATE:match_time,F_GAMEMODE,F_ADDRESS,F_GAMEDEPARTMENT');
+        $rs1=toIoArray($tmp,'F_ID:id,F_GAMEID:game_id,F_GAMECODE:game_code,F_GAMENAME:match_name,F_GAMEDATE:match_time,F_GAMEMODE,F_ADDRESS,F_GAMEDEPARTMENT');
         return array('code'=>'0','msg'=>'正常','data'=>$rs1);
     }
 
