@@ -1,0 +1,68 @@
+2020/03/06 14:01:43 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'game2020.order_list' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `order_list`.
+2020/03/06 14:01:43 [error] [exception.CDbException] CDbException: 数据库中无法找到 active record class "OrderList" 对应的 table "{{order_list}}". in /usr/local/var/www/snooke/framework/db/ar/CActiveRecord.php:2390
+Stack trace:
+#0 /usr/local/var/www/snooke/framework/db/ar/CActiveRecord.php(413): CActiveRecordMetaData->__construct(Object(OrderList))
+#1 /usr/local/var/www/snooke/framework/db/ar/CActiveRecord.php(663): CActiveRecord->getMetaData()
+#2 /usr/local/var/www/snooke/framework/db/ar/CActiveRecord.php(1609): CActiveRecord->getTableSchema()
+#3 /usr/local/var/www/snooke/admin/components/BaseController.php(62): CActiveRecord->count(Object(CDbCriteria))
+#4 /usr/local/var/www/snooke/admin/controllers/OrderListController.php(60): BaseController->_list(Object(OrderList), Object(CDbCriteria), 'index', Array)
+#5 [internal function]: OrderListController->actionIndex('')
+#6 /usr/local/var/www/snooke/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs(Object(OrderListController), Array)
+#7 /usr/local/var/www/snooke/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(OrderListController), Object(ReflectionMethod), Array)
+#8 /usr/local/var/www/snooke/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#9 /usr/local/var/www/snooke/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#10 /usr/local/var/www/snooke/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /usr/local/var/www/snooke/framework/web/CWebApplication.php(282): CController->run('index')
+#12 /usr/local/var/www/snooke/framework/web/CWebApplication.php(141): CWebApplication->runController('orderList/index')
+#13 /usr/local/var/www/snooke/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#14 /usr/local/var/www/snooke/index.php(34): CApplication->run()
+#15 {main}
+REQUEST_URI=/snooke/index.php?r=orderList/index
+HTTP_REFERER=http://localhost:8080/snooke/index.php
+---
+2020/03/06 14:01:46 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'game2020.test_list' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `test_list`.
+2020/03/06 14:01:46 [error] [exception.CDbException] CDbException: 数据库中无法找到 active record class "TestList" 对应的 table "{{test_list}}". in /usr/local/var/www/snooke/framework/db/ar/CActiveRecord.php:2390
+Stack trace:
+#0 /usr/local/var/www/snooke/framework/db/ar/CActiveRecord.php(413): CActiveRecordMetaData->__construct(Object(TestList))
+#1 /usr/local/var/www/snooke/framework/db/ar/CActiveRecord.php(663): CActiveRecord->getMetaData()
+#2 /usr/local/var/www/snooke/framework/db/ar/CActiveRecord.php(1609): CActiveRecord->getTableSchema()
+#3 /usr/local/var/www/snooke/admin/components/BaseController.php(62): CActiveRecord->count(Object(CDbCriteria))
+#4 /usr/local/var/www/snooke/admin/controllers/TestListController.php(58): BaseController->_list(Object(TestList), Object(CDbCriteria), 'index', Array)
+#5 [internal function]: TestListController->actionIndex('')
+#6 /usr/local/var/www/snooke/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs(Object(TestListController), Array)
+#7 /usr/local/var/www/snooke/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(TestListController), Object(ReflectionMethod), Array)
+#8 /usr/local/var/www/snooke/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#9 /usr/local/var/www/snooke/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#10 /usr/local/var/www/snooke/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /usr/local/var/www/snooke/framework/web/CWebApplication.php(282): CController->run('index')
+#12 /usr/local/var/www/snooke/framework/web/CWebApplication.php(141): CWebApplication->runController('testList/index')
+#13 /usr/local/var/www/snooke/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#14 /usr/local/var/www/snooke/index.php(34): CApplication->run()
+#15 {main}
+REQUEST_URI=/snooke/index.php?r=testList/index
+HTTP_REFERER=http://localhost:8080/snooke/index.php
+---
+2020/03/07 10:08:12 [error] [php] move_uploaded_file(/usr/local/var/www/snooke/uploads/image/photo/5e63728ce3ee27.69371601.png): failed to open stream: Permission denied (/usr/local/var/www/snooke/framework/web/CUploadedFile.php:201)
+Stack trace:
+#0 /usr/local/var/www/snooke/framework/web/actions/CInlineAction.php(49): MatchController->actionUploadImg()
+#1 /usr/local/var/www/snooke/framework/web/CController.php(308): CInlineAction->runWithParams()
+#2 /usr/local/var/www/snooke/framework/web/CController.php(286): MatchController->runAction()
+#3 /usr/local/var/www/snooke/framework/web/CController.php(265): MatchController->runActionWithFilters()
+#4 /usr/local/var/www/snooke/framework/web/CWebApplication.php(282): MatchController->run()
+#5 /usr/local/var/www/snooke/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#6 /usr/local/var/www/snooke/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#7 /usr/local/var/www/snooke/index.php(34): CWebApplication->run()
+REQUEST_URI=/snooke/index.php?r=Match/UploadImg
+2020/03/07 14:03:14 [error] [exception.CHttpException.400] CHttpException: 您的请求无效。 in /usr/local/var/www/snooke/framework/web/CController.php:337
+Stack trace:
+#0 /usr/local/var/www/snooke/framework/web/CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 /usr/local/var/www/snooke/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#2 /usr/local/var/www/snooke/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 /usr/local/var/www/snooke/framework/web/CWebApplication.php(282): CController->run('UploadImg')
+#4 /usr/local/var/www/snooke/framework/web/CWebApplication.php(141): CWebApplication->runController('Match/UploadImg')
+#5 /usr/local/var/www/snooke/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#6 /usr/local/var/www/snooke/index.php(34): CApplication->run()
+#7 {main}
+REQUEST_URI=/snooke/index.php?r=Match/UploadImg
+HTTP_REFERER=https://servicewechat.com/wxdd0fb2f6e79f3d82/devtools/page-frame.html
+---

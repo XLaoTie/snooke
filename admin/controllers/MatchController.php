@@ -195,6 +195,86 @@ class MatchController extends BaseController {
       $this->save_score_pingpeng($data);
     }
 //{"FNO":"1","FGAME":"1","FTA":"CHN","FNA":"\u738b\u3000\u707f","FFA":"2","FSA":"0","FBA":"0","FTB":"DJH","FNB":"\u4e01\u4fca\u8f89","FFB":"1","FSB":"14","FBB":"14","FCH":"2","FN1":"1","FCLE":"0","FYN":"0","FNUM":"3","FPS":"0","FIS":"0","GTYPE":"1"} 
+    public function actionUploadImg1($vs_id)
+    {
+      $data=array();
+      $file1=$_FILES['file'];
+      if(empty($file1)) ajax_exit(array('status' => 0, 'msg' => '上传失败'));
+      $attach = CUploadedFile::getInstanceByName('file');
+      $savepath = ROOT_PATH . '/uploads/image/photo/';
+      $sitepath = SITE_PATH . '/uploads/image/photo/';
+      $prefix='';
+      // $datePath = date('Y') . '/' . date('m') . '/' . date('d') . '/';
+        // if (!is_dir($savepath . $datePath)) {
+        //     mk_dir($savepath . $datePath);
+        // }
+         // $datePath = date('Y') . '/' . date('m') . '/' . date('d') . '/';
+        if (!is_dir($savepath)) {
+            mk_dir($savepath);
+        }
+        $options = array(
+            'http' => array(
+                'method' => 'POST',
+                'header' => 'content-type:application/octet-stream',
+                'content' => file_get_contents($attach->tempName),
+            ),
+        );
+        $file = stream_context_create($options);
+      // $fileName =$datePath.$prefix . uniqid('', true) . '.' . $attach->extensionName;
+      $fileName =uniqid('', true) . '.' . $attach->extensionName;
+    //  保存选手1照片
+     $matchesInfo=Playervs::model()->find(" f_VSid=".$vs_id);
+     $matchesInfo->F_PhotoA = $fileName;
+     $status=$matchesInfo->save();
+
+        if ($attach->saveAs($savepath . $fileName)&&$status) {
+            ajax_exit(array('status' => 1, 'msg' => '上传成功', 'savename' => $fileName, 'allpath' => $sitepath . $fileName));
+        } else {
+            ajax_exit(array('status' => 0, 'msg' => '上传失败'));
+        }
+    }
+
+  public function actionUploadImg2($vs_id)
+    {
+      $data=array();
+      $file1=$_FILES['file'];
+      if(empty($file1)) ajax_exit(array('status' => 0, 'msg' => '上传失败'));
+      $attach = CUploadedFile::getInstanceByName('file');
+      $savepath = ROOT_PATH . '/uploads/image/photo/';
+      $sitepath = SITE_PATH . '/uploads/image/photo/';
+      $prefix='';
+      // $datePath = date('Y') . '/' . date('m') . '/' . date('d') . '/';
+        // if (!is_dir($savepath . $datePath)) {
+        //     mk_dir($savepath . $datePath);
+        // }
+         // $datePath = date('Y') . '/' . date('m') . '/' . date('d') . '/';
+        if (!is_dir($savepath)) {
+            mk_dir($savepath);
+        }
+        $options = array(
+            'http' => array(
+                'method' => 'POST',
+                'header' => 'content-type:application/octet-stream',
+                'content' => file_get_contents($attach->tempName),
+            ),
+        );
+        $file = stream_context_create($options);
+      // $fileName =$datePath.$prefix . uniqid('', true) . '.' . $attach->extensionName;
+      $fileName =uniqid('', true) . '.' . $attach->extensionName;
+    //  保存选手1照片
+     $matchesInfo=Playervs::model()->find(" f_VSid=".$vs_id);
+     $matchesInfo->F_PhotoB = $fileName;
+     $status=$matchesInfo->save();
+
+        if ($attach->saveAs($savepath . $fileName)&&$status) {
+            ajax_exit(array('status' => 1, 'msg' => '上传成功', 'savename' => $fileName, 'allpath' => $sitepath . $fileName));
+        } else {
+            ajax_exit(array('status' => 0, 'msg' => '上传失败'));
+        }
+    }
+
+
+
 
 function save_score_pingpeng($data){
 $nw=0;

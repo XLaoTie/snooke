@@ -2,9 +2,78 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ff72f386-0f5a-4688-ae5d-843d30253d3c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/uploads/image/flag/america.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/image/flag/china.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/image/photo/f_photo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/image/photo/s_photo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/controllers/MatchController.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/controllers/MatchController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/GameName.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/GameName.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/41128b47/autocomplete/indicator.gif" beforeDir="false" afterPath="$PROJECT_DIR$/assets/41128b47/autocomplete/indicator.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/41128b47/autocomplete/jquery.autocomplete.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/41128b47/autocomplete/jquery.autocomplete.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/41128b47/jquery.ajaxqueue.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/41128b47/jquery.ajaxqueue.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/41128b47/jquery.autocomplete.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/41128b47/jquery.autocomplete.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/41128b47/jquery.ba-bbq.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/41128b47/jquery.ba-bbq.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/41128b47/jquery.ba-bbq.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/41128b47/jquery.ba-bbq.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/41128b47/jquery.bgiframe.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/41128b47/jquery.bgiframe.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/41128b47/jquery.cookie.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/41128b47/jquery.cookie.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/41128b47/jquery.history.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/41128b47/jquery.history.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/41128b47/jquery.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/41128b47/jquery.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/41128b47/jquery.maskedinput.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/41128b47/jquery.maskedinput.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/41128b47/jquery.maskedinput.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/41128b47/jquery.maskedinput.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/41128b47/jquery.metadata.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/41128b47/jquery.metadata.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/41128b47/jquery.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/41128b47/jquery.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/41128b47/jquery.multifile.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/41128b47/jquery.multifile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/41128b47/jquery.rating.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/41128b47/jquery.rating.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/41128b47/jquery.treeview.async.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/41128b47/jquery.treeview.async.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/41128b47/jquery.treeview.edit.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/41128b47/jquery.treeview.edit.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/41128b47/jquery.treeview.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/41128b47/jquery.treeview.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/41128b47/jquery.yii.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/41128b47/jquery.yii.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/41128b47/jquery.yiiactiveform.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/41128b47/jquery.yiiactiveform.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/41128b47/jquery.yiitab.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/41128b47/jquery.yiitab.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/41128b47/jui/css/base/images/ui-bg_flat_0_aaaaaa_40x100.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/41128b47/jui/css/base/images/ui-bg_flat_0_aaaaaa_40x100.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/41128b47/jui/css/base/images/ui-bg_flat_75_ffffff_40x100.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/41128b47/jui/css/base/images/ui-bg_flat_75_ffffff_40x100.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/41128b47/jui/css/base/images/ui-bg_glass_55_fbf9ee_1x400.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/41128b47/jui/css/base/images/ui-bg_glass_55_fbf9ee_1x400.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/41128b47/jui/css/base/images/ui-bg_glass_65_ffffff_1x400.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/41128b47/jui/css/base/images/ui-bg_glass_65_ffffff_1x400.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/41128b47/jui/css/base/images/ui-bg_glass_75_dadada_1x400.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/41128b47/jui/css/base/images/ui-bg_glass_75_dadada_1x400.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/41128b47/jui/css/base/images/ui-bg_glass_75_e6e6e6_1x400.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/41128b47/jui/css/base/images/ui-bg_glass_75_e6e6e6_1x400.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/41128b47/jui/css/base/images/ui-bg_glass_95_fef1ec_1x400.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/41128b47/jui/css/base/images/ui-bg_glass_95_fef1ec_1x400.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/41128b47/jui/css/base/images/ui-bg_highlight-soft_75_cccccc_1x100.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/41128b47/jui/css/base/images/ui-bg_highlight-soft_75_cccccc_1x100.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/41128b47/jui/css/base/images/ui-icons_222222_256x240.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/41128b47/jui/css/base/images/ui-icons_222222_256x240.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/41128b47/jui/css/base/images/ui-icons_2e83ff_256x240.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/41128b47/jui/css/base/images/ui-icons_2e83ff_256x240.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/41128b47/jui/css/base/images/ui-icons_454545_256x240.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/41128b47/jui/css/base/images/ui-icons_454545_256x240.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/41128b47/jui/css/base/images/ui-icons_888888_256x240.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/41128b47/jui/css/base/images/ui-icons_888888_256x240.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/41128b47/jui/css/base/images/ui-icons_cd0a0a_256x240.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/41128b47/jui/css/base/images/ui-icons_cd0a0a_256x240.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/41128b47/jui/css/base/jquery-ui.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/41128b47/jui/css/base/jquery-ui.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/41128b47/jui/js/jquery-ui-i18n.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/41128b47/jui/js/jquery-ui-i18n.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/41128b47/jui/js/jquery-ui.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/41128b47/jui/js/jquery-ui.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/41128b47/punycode.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/41128b47/punycode.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/41128b47/punycode.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/41128b47/punycode.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/41128b47/rating/delete.gif" beforeDir="false" afterPath="$PROJECT_DIR$/assets/41128b47/rating/delete.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/41128b47/rating/jquery.rating.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/41128b47/rating/jquery.rating.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/41128b47/rating/star.gif" beforeDir="false" afterPath="$PROJECT_DIR$/assets/41128b47/rating/star.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/41128b47/treeview/images/ajax-loader.gif" beforeDir="false" afterPath="$PROJECT_DIR$/assets/41128b47/treeview/images/ajax-loader.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/41128b47/treeview/images/file.gif" beforeDir="false" afterPath="$PROJECT_DIR$/assets/41128b47/treeview/images/file.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/41128b47/treeview/images/folder-closed.gif" beforeDir="false" afterPath="$PROJECT_DIR$/assets/41128b47/treeview/images/folder-closed.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/41128b47/treeview/images/folder.gif" beforeDir="false" afterPath="$PROJECT_DIR$/assets/41128b47/treeview/images/folder.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/41128b47/treeview/images/minus.gif" beforeDir="false" afterPath="$PROJECT_DIR$/assets/41128b47/treeview/images/minus.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/41128b47/treeview/images/plus.gif" beforeDir="false" afterPath="$PROJECT_DIR$/assets/41128b47/treeview/images/plus.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/41128b47/treeview/images/treeview-black-line.gif" beforeDir="false" afterPath="$PROJECT_DIR$/assets/41128b47/treeview/images/treeview-black-line.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/41128b47/treeview/images/treeview-black.gif" beforeDir="false" afterPath="$PROJECT_DIR$/assets/41128b47/treeview/images/treeview-black.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/41128b47/treeview/images/treeview-default-line.gif" beforeDir="false" afterPath="$PROJECT_DIR$/assets/41128b47/treeview/images/treeview-default-line.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/41128b47/treeview/images/treeview-default.gif" beforeDir="false" afterPath="$PROJECT_DIR$/assets/41128b47/treeview/images/treeview-default.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/41128b47/treeview/images/treeview-famfamfam-line.gif" beforeDir="false" afterPath="$PROJECT_DIR$/assets/41128b47/treeview/images/treeview-famfamfam-line.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/41128b47/treeview/images/treeview-famfamfam.gif" beforeDir="false" afterPath="$PROJECT_DIR$/assets/41128b47/treeview/images/treeview-famfamfam.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/41128b47/treeview/images/treeview-gray-line.gif" beforeDir="false" afterPath="$PROJECT_DIR$/assets/41128b47/treeview/images/treeview-gray-line.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/41128b47/treeview/images/treeview-gray.gif" beforeDir="false" afterPath="$PROJECT_DIR$/assets/41128b47/treeview/images/treeview-gray.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/41128b47/treeview/images/treeview-red-line.gif" beforeDir="false" afterPath="$PROJECT_DIR$/assets/41128b47/treeview/images/treeview-red-line.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/41128b47/treeview/images/treeview-red.gif" beforeDir="false" afterPath="$PROJECT_DIR$/assets/41128b47/treeview/images/treeview-red.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/41128b47/treeview/jquery.treeview.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/41128b47/treeview/jquery.treeview.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/41128b47/yiitab/jquery.yiitab.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/41128b47/yiitab/jquery.yiitab.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hsyii.iml" beforeDir="false" afterPath="$PROJECT_DIR$/hsyii.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/models/Playervs.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/Playervs.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/runtime/admin/application.log" beforeDir="false" afterPath="$PROJECT_DIR$/runtime/admin/application.log" afterDir="false" />
     </list>
@@ -28,7 +97,17 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/uploads/image/flag" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/uploads/image/flag" />
+      <recent name="$PROJECT_DIR$/uploads/image/photo" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/uploads/image/flag" />
+      <recent name="$PROJECT_DIR$/uploads/image/picture" />
+    </key>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -44,7 +123,9 @@
       <workItem from="1582365217137" duration="542000" />
       <workItem from="1582378104303" duration="704000" />
       <workItem from="1582426516769" duration="18878000" />
-      <workItem from="1582709653063" duration="9984000" />
+      <workItem from="1582709653063" duration="10296000" />
+      <workItem from="1583497196986" duration="10386000" />
+      <workItem from="1583599648388" duration="13000" />
     </task>
     <task id="LOCAL-00001" summary="first">
       <created>1582474569638</created>
@@ -68,13 +149,17 @@
       <screen x="49" y="23" width="1391" height="877" />
     </state>
     <state x="331" y="66" key="CommitChangelistDialog2/49.23.1391.877@49.23.1391.877" timestamp="1582474569365" />
-    <state x="402" y="296" key="com.intellij.ide.util.TipDialog" timestamp="1582709653896">
+    <state x="402" y="296" key="com.intellij.ide.util.TipDialog" timestamp="1583599648352">
       <screen x="49" y="23" width="1391" height="877" />
     </state>
-    <state x="399" y="296" key="com.intellij.ide.util.TipDialog/48.23.1392.877@48.23.1392.877" timestamp="1582378109646" />
-    <state x="402" y="296" key="com.intellij.ide.util.TipDialog/49.23.1391.877@49.23.1391.877" timestamp="1582709653896" />
+    <state x="399" y="296" key="com.intellij.ide.util.TipDialog/48.23.1392.877@48.23.1392.877" timestamp="1583497198395" />
+    <state x="402" y="296" key="com.intellij.ide.util.TipDialog/49.23.1391.877@49.23.1391.877" timestamp="1583599648352" />
     <state x="400" y="296" key="com.intellij.ide.util.TipDialog/52.23.1388.877@52.23.1388.877" timestamp="1582360100299" />
     <state x="406" y="296" key="com.intellij.ide.util.TipDialog/54.23.1386.877@54.23.1386.877" timestamp="1582426729871" />
     <state x="406" y="296" key="com.intellij.ide.util.TipDialog/60.23.1380.877@60.23.1380.877" timestamp="1582365217457" />
+    <state x="474" y="309" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1583586679216">
+      <screen x="48" y="23" width="1392" height="877" />
+    </state>
+    <state x="474" y="309" key="vcs.readOnlyHandler.ReadOnlyStatusDialog/48.23.1392.877@48.23.1392.877" timestamp="1583586679216" />
   </component>
 </project>
