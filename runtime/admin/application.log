@@ -1,68 +1,276 @@
-2020/03/06 14:01:43 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'game2020.order_list' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `order_list`.
-2020/03/06 14:01:43 [error] [exception.CDbException] CDbException: 数据库中无法找到 active record class "OrderList" 对应的 table "{{order_list}}". in /usr/local/var/www/snooke/framework/db/ar/CActiveRecord.php:2390
+2020/03/24 07:40:50 [error] [exception.ParseError] ParseError: syntax error, unexpected ',' in /usr/local/var/www/snooke/admin/controllers/WxShopController.php:97
 Stack trace:
-#0 /usr/local/var/www/snooke/framework/db/ar/CActiveRecord.php(413): CActiveRecordMetaData->__construct(Object(OrderList))
-#1 /usr/local/var/www/snooke/framework/db/ar/CActiveRecord.php(663): CActiveRecord->getMetaData()
-#2 /usr/local/var/www/snooke/framework/db/ar/CActiveRecord.php(1609): CActiveRecord->getTableSchema()
-#3 /usr/local/var/www/snooke/admin/components/BaseController.php(62): CActiveRecord->count(Object(CDbCriteria))
-#4 /usr/local/var/www/snooke/admin/controllers/OrderListController.php(60): BaseController->_list(Object(OrderList), Object(CDbCriteria), 'index', Array)
-#5 [internal function]: OrderListController->actionIndex('')
-#6 /usr/local/var/www/snooke/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs(Object(OrderListController), Array)
-#7 /usr/local/var/www/snooke/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(OrderListController), Object(ReflectionMethod), Array)
-#8 /usr/local/var/www/snooke/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
-#9 /usr/local/var/www/snooke/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
-#10 /usr/local/var/www/snooke/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
-#11 /usr/local/var/www/snooke/framework/web/CWebApplication.php(282): CController->run('index')
-#12 /usr/local/var/www/snooke/framework/web/CWebApplication.php(141): CWebApplication->runController('orderList/index')
-#13 /usr/local/var/www/snooke/framework/base/CApplication.php(185): CWebApplication->processRequest()
-#14 /usr/local/var/www/snooke/index.php(34): CApplication->run()
-#15 {main}
-REQUEST_URI=/snooke/index.php?r=orderList/index
-HTTP_REFERER=http://localhost:8080/snooke/index.php
+#0 /usr/local/var/www/snooke/framework/web/CWebApplication.php(276): CWebApplication->createController('QueryList/')
+#1 /usr/local/var/www/snooke/framework/web/CWebApplication.php(141): CWebApplication->runController('WxShop/QueryLis...')
+#2 /usr/local/var/www/snooke/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#3 /usr/local/var/www/snooke/index.php(34): CApplication->run()
+#4 {main}
+REQUEST_URI=/snooke/index.php?r=WxShop/QueryList&page=1&perpage=5
+HTTP_REFERER=https://servicewechat.com/wxdd0fb2f6e79f3d82/devtools/page-frame.html
 ---
-2020/03/06 14:01:46 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'game2020.test_list' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `test_list`.
-2020/03/06 14:01:46 [error] [exception.CDbException] CDbException: 数据库中无法找到 active record class "TestList" 对应的 table "{{test_list}}". in /usr/local/var/www/snooke/framework/db/ar/CActiveRecord.php:2390
+2020/03/24 08:31:44 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[HY000]: General error: 1364 Field 'order_good_id' doesn't have a default value. The SQL statement executed was: INSERT INTO `goods_order` (`order_buyer`, `order_location`, `order_price`, `order_goods`, `order_img`, `order_remark`, `order_mobile`, `order_identify`, `order_goods_num`, `order_number`, `order_time`, `order_status`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10, :yp11).
+2020/03/24 08:31:44 [error] [exception.CDbException] CDbException: CDbCommand 无法执行 SQL 语句: SQLSTATE[HY000]: General error: 1364 Field 'order_good_id' doesn't have a default value in /usr/local/var/www/snooke/framework/db/CDbCommand.php:358
 Stack trace:
-#0 /usr/local/var/www/snooke/framework/db/ar/CActiveRecord.php(413): CActiveRecordMetaData->__construct(Object(TestList))
-#1 /usr/local/var/www/snooke/framework/db/ar/CActiveRecord.php(663): CActiveRecord->getMetaData()
-#2 /usr/local/var/www/snooke/framework/db/ar/CActiveRecord.php(1609): CActiveRecord->getTableSchema()
-#3 /usr/local/var/www/snooke/admin/components/BaseController.php(62): CActiveRecord->count(Object(CDbCriteria))
-#4 /usr/local/var/www/snooke/admin/controllers/TestListController.php(58): BaseController->_list(Object(TestList), Object(CDbCriteria), 'index', Array)
-#5 [internal function]: TestListController->actionIndex('')
-#6 /usr/local/var/www/snooke/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs(Object(TestListController), Array)
-#7 /usr/local/var/www/snooke/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(TestListController), Object(ReflectionMethod), Array)
-#8 /usr/local/var/www/snooke/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
-#9 /usr/local/var/www/snooke/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
-#10 /usr/local/var/www/snooke/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
-#11 /usr/local/var/www/snooke/framework/web/CWebApplication.php(282): CController->run('index')
-#12 /usr/local/var/www/snooke/framework/web/CWebApplication.php(141): CWebApplication->runController('testList/index')
-#13 /usr/local/var/www/snooke/framework/base/CApplication.php(185): CWebApplication->processRequest()
-#14 /usr/local/var/www/snooke/index.php(34): CApplication->run()
-#15 {main}
-REQUEST_URI=/snooke/index.php?r=testList/index
-HTTP_REFERER=http://localhost:8080/snooke/index.php
+#0 /usr/local/var/www/snooke/framework/db/ar/CActiveRecord.php(1083): CDbCommand->execute()
+#1 /usr/local/var/www/snooke/framework/db/ar/CActiveRecord.php(811): CActiveRecord->insert(NULL)
+#2 /usr/local/var/www/snooke/admin/controllers/WxShopController.php(99): CActiveRecord->save()
+#3 /usr/local/var/www/snooke/framework/web/actions/CInlineAction.php(49): WxShopController->actionCreateNewOrder()
+#4 /usr/local/var/www/snooke/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /usr/local/var/www/snooke/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#6 /usr/local/var/www/snooke/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /usr/local/var/www/snooke/framework/web/CWebApplication.php(282): CController->run('CreateNewOrder')
+#8 /usr/local/var/www/snooke/framework/web/CWebApplication.php(141): CWebApplication->runController('WxShop/CreateNe...')
+#9 /usr/local/var/www/snooke/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#10 /usr/local/var/www/snooke/index.php(34): CApplication->run()
+#11 {main}
+REQUEST_URI=/snooke/index.php?r=WxShop/CreateNewOrder
 ---
-2020/03/07 10:08:12 [error] [php] move_uploaded_file(/usr/local/var/www/snooke/uploads/image/photo/5e63728ce3ee27.69371601.png): failed to open stream: Permission denied (/usr/local/var/www/snooke/framework/web/CUploadedFile.php:201)
+2020/03/24 09:35:12 [error] [system.db.CDbCommand] CDbCommand::fetch() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'undefined' in 'where clause'. The SQL statement executed was: SELECT * FROM `goods_info` `t` WHERE id=undefined LIMIT 1.
+2020/03/24 09:35:12 [error] [exception.CDbException] CDbException: CDbCommand 无法执行 SQL 语句: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'undefined' in 'where clause' in /usr/local/var/www/snooke/framework/db/CDbCommand.php:543
 Stack trace:
-#0 /usr/local/var/www/snooke/framework/web/actions/CInlineAction.php(49): MatchController->actionUploadImg()
-#1 /usr/local/var/www/snooke/framework/web/CController.php(308): CInlineAction->runWithParams()
-#2 /usr/local/var/www/snooke/framework/web/CController.php(286): MatchController->runAction()
-#3 /usr/local/var/www/snooke/framework/web/CController.php(265): MatchController->runActionWithFilters()
-#4 /usr/local/var/www/snooke/framework/web/CWebApplication.php(282): MatchController->run()
-#5 /usr/local/var/www/snooke/framework/web/CWebApplication.php(141): CWebApplication->runController()
-#6 /usr/local/var/www/snooke/framework/base/CApplication.php(185): CWebApplication->processRequest()
-#7 /usr/local/var/www/snooke/index.php(34): CWebApplication->run()
-REQUEST_URI=/snooke/index.php?r=Match/UploadImg
-2020/03/07 14:03:14 [error] [exception.CHttpException.400] CHttpException: 您的请求无效。 in /usr/local/var/www/snooke/framework/web/CController.php:337
+#0 /usr/local/var/www/snooke/framework/db/CDbCommand.php(415): CDbCommand->queryInternal('fetch', Array, Array)
+#1 /usr/local/var/www/snooke/framework/db/ar/CActiveRecord.php(1359): CDbCommand->queryRow()
+#2 /usr/local/var/www/snooke/framework/db/ar/CActiveRecord.php(1464): CActiveRecord->query(Object(CDbCriteria))
+#3 /usr/local/var/www/snooke/admin/controllers/WxShopController.php(44): CActiveRecord->find(Object(CDbCriteria))
+#4 [internal function]: WxShopController->actionGetGoodsDetail('undefined')
+#5 /usr/local/var/www/snooke/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs(Object(WxShopController), Array)
+#6 /usr/local/var/www/snooke/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(WxShopController), Object(ReflectionMethod), Array)
+#7 /usr/local/var/www/snooke/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#8 /usr/local/var/www/snooke/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#9 /usr/local/var/www/snooke/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 /usr/local/var/www/snooke/framework/web/CWebApplication.php(282): CController->run('GetGoodsDetail')
+#11 /usr/local/var/www/snooke/framework/web/CWebApplication.php(141): CWebApplication->runController('WxShop/GetGoods...')
+#12 /usr/local/var/www/snooke/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#13 /usr/local/var/www/snooke/index.php(34): CApplication->run()
+#14 {main}
+REQUEST_URI=/snooke/index.php?r=WxShop/GetGoodsDetail&id=undefined
+HTTP_REFERER=https://servicewechat.com/wxdd0fb2f6e79f3d82/devtools/page-frame.html
+---
+2020/03/24 09:47:45 [error] [exception.ParseError] ParseError: syntax error, unexpected '$status' (T_VARIABLE) in /usr/local/var/www/snooke/admin/controllers/WxShopController.php:108
+Stack trace:
+#0 /usr/local/var/www/snooke/framework/web/CWebApplication.php(276): CWebApplication->createController('QueryList/')
+#1 /usr/local/var/www/snooke/framework/web/CWebApplication.php(141): CWebApplication->runController('WxShop/QueryLis...')
+#2 /usr/local/var/www/snooke/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#3 /usr/local/var/www/snooke/index.php(34): CApplication->run()
+#4 {main}
+REQUEST_URI=/snooke/index.php?r=WxShop/QueryList&page=1&perpage=5
+HTTP_REFERER=https://servicewechat.com/wxdd0fb2f6e79f3d82/devtools/page-frame.html
+---
+2020/03/24 09:47:47 [error] [exception.ParseError] ParseError: syntax error, unexpected '$status' (T_VARIABLE) in /usr/local/var/www/snooke/admin/controllers/WxShopController.php:108
+Stack trace:
+#0 /usr/local/var/www/snooke/framework/web/CWebApplication.php(276): CWebApplication->createController('QueryMyOrderLis...')
+#1 /usr/local/var/www/snooke/framework/web/CWebApplication.php(141): CWebApplication->runController('WxShop/QueryMyO...')
+#2 /usr/local/var/www/snooke/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#3 /usr/local/var/www/snooke/index.php(34): CApplication->run()
+#4 {main}
+REQUEST_URI=/snooke/index.php?r=WxShop/QueryMyOrderList&order_identify=%27undefined%27&order_status=3
+HTTP_REFERER=https://servicewechat.com/wxdd0fb2f6e79f3d82/devtools/page-frame.html
+---
+2020/03/24 09:47:47 [error] [exception.ParseError] ParseError: syntax error, unexpected '$status' (T_VARIABLE) in /usr/local/var/www/snooke/admin/controllers/WxShopController.php:108
+Stack trace:
+#0 /usr/local/var/www/snooke/framework/web/CWebApplication.php(276): CWebApplication->createController('QueryMyOrderLis...')
+#1 /usr/local/var/www/snooke/framework/web/CWebApplication.php(141): CWebApplication->runController('WxShop/QueryMyO...')
+#2 /usr/local/var/www/snooke/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#3 /usr/local/var/www/snooke/index.php(34): CApplication->run()
+#4 {main}
+REQUEST_URI=/snooke/index.php?r=WxShop/QueryMyOrderList&order_identify=%20%27undefined%27
+HTTP_REFERER=https://servicewechat.com/wxdd0fb2f6e79f3d82/devtools/page-frame.html
+---
+2020/03/24 09:47:47 [error] [exception.ParseError] ParseError: syntax error, unexpected '$status' (T_VARIABLE) in /usr/local/var/www/snooke/admin/controllers/WxShopController.php:108
+Stack trace:
+#0 /usr/local/var/www/snooke/framework/web/CWebApplication.php(276): CWebApplication->createController('QueryMyOrderLis...')
+#1 /usr/local/var/www/snooke/framework/web/CWebApplication.php(141): CWebApplication->runController('WxShop/QueryMyO...')
+#2 /usr/local/var/www/snooke/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#3 /usr/local/var/www/snooke/index.php(34): CApplication->run()
+#4 {main}
+REQUEST_URI=/snooke/index.php?r=WxShop/QueryMyOrderList&order_identify=%27undefined%27&order_status=1
+HTTP_REFERER=https://servicewechat.com/wxdd0fb2f6e79f3d82/devtools/page-frame.html
+---
+2020/03/24 09:47:47 [error] [exception.ParseError] ParseError: syntax error, unexpected '$status' (T_VARIABLE) in /usr/local/var/www/snooke/admin/controllers/WxShopController.php:108
+Stack trace:
+#0 /usr/local/var/www/snooke/framework/web/CWebApplication.php(276): CWebApplication->createController('QueryMyOrderLis...')
+#1 /usr/local/var/www/snooke/framework/web/CWebApplication.php(141): CWebApplication->runController('WxShop/QueryMyO...')
+#2 /usr/local/var/www/snooke/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#3 /usr/local/var/www/snooke/index.php(34): CApplication->run()
+#4 {main}
+REQUEST_URI=/snooke/index.php?r=WxShop/QueryMyOrderList&order_identify=%27undefined%27&order_status=2
+HTTP_REFERER=https://servicewechat.com/wxdd0fb2f6e79f3d82/devtools/page-frame.html
+---
+2020/03/24 09:49:19 [error] [exception.ParseError] ParseError: syntax error, unexpected '$status' (T_VARIABLE) in /usr/local/var/www/snooke/admin/controllers/WxShopController.php:108
+Stack trace:
+#0 /usr/local/var/www/snooke/framework/web/CWebApplication.php(276): CWebApplication->createController('QueryList/')
+#1 /usr/local/var/www/snooke/framework/web/CWebApplication.php(141): CWebApplication->runController('WxShop/QueryLis...')
+#2 /usr/local/var/www/snooke/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#3 /usr/local/var/www/snooke/index.php(34): CApplication->run()
+#4 {main}
+REQUEST_URI=/snooke/index.php?r=WxShop/QueryList&page=1&perpage=5
+HTTP_REFERER=https://servicewechat.com/wxdd0fb2f6e79f3d82/devtools/page-frame.html
+---
+2020/03/24 09:50:40 [error] [exception.ParseError] ParseError: syntax error, unexpected '$orderId' (T_VARIABLE) in /usr/local/var/www/snooke/admin/controllers/WxShopController.php:109
+Stack trace:
+#0 /usr/local/var/www/snooke/framework/web/CWebApplication.php(276): CWebApplication->createController('QueryList/')
+#1 /usr/local/var/www/snooke/framework/web/CWebApplication.php(141): CWebApplication->runController('WxShop/QueryLis...')
+#2 /usr/local/var/www/snooke/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#3 /usr/local/var/www/snooke/index.php(34): CApplication->run()
+#4 {main}
+REQUEST_URI=/snooke/index.php?r=WxShop/QueryList&page=1&perpage=5
+HTTP_REFERER=https://servicewechat.com/wxdd0fb2f6e79f3d82/devtools/page-frame.html
+---
+2020/03/24 10:32:24 [error] [system.db.CDbCommand] CDbCommand::fetch() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'undefined' in 'where clause'. The SQL statement executed was: SELECT * FROM `goods_info` `t` WHERE id=undefined LIMIT 1.
+2020/03/24 10:32:24 [error] [exception.CDbException] CDbException: CDbCommand 无法执行 SQL 语句: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'undefined' in 'where clause' in /usr/local/var/www/snooke/framework/db/CDbCommand.php:543
+Stack trace:
+#0 /usr/local/var/www/snooke/framework/db/CDbCommand.php(415): CDbCommand->queryInternal('fetch', Array, Array)
+#1 /usr/local/var/www/snooke/framework/db/ar/CActiveRecord.php(1359): CDbCommand->queryRow()
+#2 /usr/local/var/www/snooke/framework/db/ar/CActiveRecord.php(1464): CActiveRecord->query(Object(CDbCriteria))
+#3 /usr/local/var/www/snooke/admin/controllers/WxShopController.php(44): CActiveRecord->find(Object(CDbCriteria))
+#4 [internal function]: WxShopController->actionGetGoodsDetail('undefined')
+#5 /usr/local/var/www/snooke/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs(Object(WxShopController), Array)
+#6 /usr/local/var/www/snooke/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(WxShopController), Object(ReflectionMethod), Array)
+#7 /usr/local/var/www/snooke/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#8 /usr/local/var/www/snooke/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#9 /usr/local/var/www/snooke/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 /usr/local/var/www/snooke/framework/web/CWebApplication.php(282): CController->run('GetGoodsDetail')
+#11 /usr/local/var/www/snooke/framework/web/CWebApplication.php(141): CWebApplication->runController('WxShop/GetGoods...')
+#12 /usr/local/var/www/snooke/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#13 /usr/local/var/www/snooke/index.php(34): CApplication->run()
+#14 {main}
+REQUEST_URI=/snooke/index.php?r=WxShop/GetGoodsDetail&id=undefined
+HTTP_REFERER=https://servicewechat.com/wxdd0fb2f6e79f3d82/devtools/page-frame.html
+---
+2020/03/24 10:38:28 [error] [exception.CHttpException.400] CHttpException: 您的请求无效。 in /usr/local/var/www/snooke/framework/web/CController.php:337
 Stack trace:
 #0 /usr/local/var/www/snooke/framework/web/CController.php(309): CController->invalidActionParams(Object(CInlineAction))
 #1 /usr/local/var/www/snooke/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
 #2 /usr/local/var/www/snooke/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
-#3 /usr/local/var/www/snooke/framework/web/CWebApplication.php(282): CController->run('UploadImg')
-#4 /usr/local/var/www/snooke/framework/web/CWebApplication.php(141): CWebApplication->runController('Match/UploadImg')
+#3 /usr/local/var/www/snooke/framework/web/CWebApplication.php(282): CController->run('QueryMyOrderLis...')
+#4 /usr/local/var/www/snooke/framework/web/CWebApplication.php(141): CWebApplication->runController('WxShop/QueryMyO...')
 #5 /usr/local/var/www/snooke/framework/base/CApplication.php(185): CWebApplication->processRequest()
 #6 /usr/local/var/www/snooke/index.php(34): CApplication->run()
 #7 {main}
-REQUEST_URI=/snooke/index.php?r=Match/UploadImg
+REQUEST_URI=/snooke/index.php?r=WxShop/QueryMyOrderList&order_id=11
+---
+2020/03/24 10:38:40 [error] [exception.CHttpException.400] CHttpException: 您的请求无效。 in /usr/local/var/www/snooke/framework/web/CController.php:337
+Stack trace:
+#0 /usr/local/var/www/snooke/framework/web/CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 /usr/local/var/www/snooke/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#2 /usr/local/var/www/snooke/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 /usr/local/var/www/snooke/framework/web/CWebApplication.php(282): CController->run('QueryMyOrderLis...')
+#4 /usr/local/var/www/snooke/framework/web/CWebApplication.php(141): CWebApplication->runController('WxShop/QueryMyO...')
+#5 /usr/local/var/www/snooke/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#6 /usr/local/var/www/snooke/index.php(34): CApplication->run()
+#7 {main}
+REQUEST_URI=/snooke/index.php?r=WxShop/QueryMyOrderList&order_id=11
+---
+2020/03/24 10:38:43 [error] [exception.CHttpException.400] CHttpException: 您的请求无效。 in /usr/local/var/www/snooke/framework/web/CController.php:337
+Stack trace:
+#0 /usr/local/var/www/snooke/framework/web/CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 /usr/local/var/www/snooke/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#2 /usr/local/var/www/snooke/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 /usr/local/var/www/snooke/framework/web/CWebApplication.php(282): CController->run('QueryMyOrderLis...')
+#4 /usr/local/var/www/snooke/framework/web/CWebApplication.php(141): CWebApplication->runController('WxShop/QueryMyO...')
+#5 /usr/local/var/www/snooke/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#6 /usr/local/var/www/snooke/index.php(34): CApplication->run()
+#7 {main}
+REQUEST_URI=/snooke/index.php?r=WxShop/QueryMyOrderList&order_id=11
+---
+2020/03/24 12:55:32 [error] [exception.Error] Error: Function name must be a string in /usr/local/var/www/snooke/admin/controllers/WxShopController.php:126
+Stack trace:
+#0 /usr/local/var/www/snooke/framework/web/actions/CInlineAction.php(49): WxShopController->actionQueryMomentList()
+#1 /usr/local/var/www/snooke/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#2 /usr/local/var/www/snooke/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#3 /usr/local/var/www/snooke/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#4 /usr/local/var/www/snooke/framework/web/CWebApplication.php(282): CController->run('QueryMomentList')
+#5 /usr/local/var/www/snooke/framework/web/CWebApplication.php(141): CWebApplication->runController('WxShop/QueryMom...')
+#6 /usr/local/var/www/snooke/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#7 /usr/local/var/www/snooke/index.php(34): CApplication->run()
+#8 {main}
+REQUEST_URI=/snooke/index.php?r=WxShop/QueryMomentList
+---
+2020/03/24 12:55:56 [error] [exception.Error] Error: Function name must be a string in /usr/local/var/www/snooke/admin/controllers/WxShopController.php:126
+Stack trace:
+#0 /usr/local/var/www/snooke/framework/web/actions/CInlineAction.php(49): WxShopController->actionQueryMomentList()
+#1 /usr/local/var/www/snooke/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#2 /usr/local/var/www/snooke/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#3 /usr/local/var/www/snooke/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#4 /usr/local/var/www/snooke/framework/web/CWebApplication.php(282): CController->run('QueryMomentList')
+#5 /usr/local/var/www/snooke/framework/web/CWebApplication.php(141): CWebApplication->runController('WxShop/QueryMom...')
+#6 /usr/local/var/www/snooke/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#7 /usr/local/var/www/snooke/index.php(34): CApplication->run()
+#8 {main}
+REQUEST_URI=/snooke/index.php?r=WxShop/QueryMomentList
+---
+2020/03/24 13:42:20 [error] [php] A non-numeric value encountered (/usr/local/var/www/snooke/admin/controllers/WxShopController.php:124)
+Stack trace:
+#0 /usr/local/var/www/snooke/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#1 /usr/local/var/www/snooke/framework/web/CController.php(308): CInlineAction->runWithParams()
+#2 /usr/local/var/www/snooke/framework/web/CController.php(286): WxShopController->runAction()
+#3 /usr/local/var/www/snooke/framework/web/CController.php(265): WxShopController->runActionWithFilters()
+#4 /usr/local/var/www/snooke/framework/web/CWebApplication.php(282): WxShopController->run()
+#5 /usr/local/var/www/snooke/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#6 /usr/local/var/www/snooke/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#7 /usr/local/var/www/snooke/index.php(34): CWebApplication->run()
+REQUEST_URI=/snooke/index.php?r=WxShop/QueryMomentList&page=1perpage=5
+2020/03/24 14:20:04 [error] [php] A non-numeric value encountered (/usr/local/var/www/snooke/admin/controllers/WxShopController.php:124)
+Stack trace:
+#0 /usr/local/var/www/snooke/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#1 /usr/local/var/www/snooke/framework/web/CController.php(308): CInlineAction->runWithParams()
+#2 /usr/local/var/www/snooke/framework/web/CController.php(286): WxShopController->runAction()
+#3 /usr/local/var/www/snooke/framework/web/CController.php(265): WxShopController->runActionWithFilters()
+#4 /usr/local/var/www/snooke/framework/web/CWebApplication.php(282): WxShopController->run()
+#5 /usr/local/var/www/snooke/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#6 /usr/local/var/www/snooke/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#7 /usr/local/var/www/snooke/index.php(34): CWebApplication->run()
+REQUEST_URI=/snooke/index.php?r=WxShop/QueryMomentList&page=1perpage=5
+2020/03/24 14:25:46 [error] [php] A non-numeric value encountered (/usr/local/var/www/snooke/admin/controllers/WxShopController.php:124)
+Stack trace:
+#0 /usr/local/var/www/snooke/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#1 /usr/local/var/www/snooke/framework/web/CController.php(308): CInlineAction->runWithParams()
+#2 /usr/local/var/www/snooke/framework/web/CController.php(286): WxShopController->runAction()
+#3 /usr/local/var/www/snooke/framework/web/CController.php(265): WxShopController->runActionWithFilters()
+#4 /usr/local/var/www/snooke/framework/web/CWebApplication.php(282): WxShopController->run()
+#5 /usr/local/var/www/snooke/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#6 /usr/local/var/www/snooke/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#7 /usr/local/var/www/snooke/index.php(34): CWebApplication->run()
+REQUEST_URI=/snooke/index.php?r=WxShop/QueryMomentList&page=1perpage=5
+2020/03/26 07:32:18 [error] [exception.CException] CException: 属性 "GoodsInfo.goods_picture1" 未被定义. in /usr/local/var/www/snooke/framework/base/CComponent.php:130
+Stack trace:
+#0 /usr/local/var/www/snooke/framework/db/ar/CActiveRecord.php(145): CComponent->__get('goods_picture1')
+#1 /usr/local/var/www/snooke/framework/base/CModel.php(596): CActiveRecord->__get('goods_picture1')
+#2 /usr/local/var/www/snooke/include/functions.php(532): CModel->offsetGet('goods_picture1')
+#3 /usr/local/var/www/snooke/models/GoodsInfo.php(82): toIoArray(Array, 'id,goods_name,g...')
+#4 /usr/local/var/www/snooke/admin/controllers/WxShopController.php(19): GoodsInfo->getInfo(Object(CDbCriteria))
+#5 [internal function]: WxShopController->actionQueryList('1', '5')
+#6 /usr/local/var/www/snooke/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs(Object(WxShopController), Array)
+#7 /usr/local/var/www/snooke/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(WxShopController), Object(ReflectionMethod), Array)
+#8 /usr/local/var/www/snooke/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#9 /usr/local/var/www/snooke/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#10 /usr/local/var/www/snooke/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /usr/local/var/www/snooke/framework/web/CWebApplication.php(282): CController->run('QueryList')
+#12 /usr/local/var/www/snooke/framework/web/CWebApplication.php(141): CWebApplication->runController('WxShop/QueryLis...')
+#13 /usr/local/var/www/snooke/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#14 /usr/local/var/www/snooke/index.php(34): CApplication->run()
+#15 {main}
+REQUEST_URI=/snooke/index.php?r=WxShop/QueryList&page=1&perpage=5
+HTTP_REFERER=https://servicewechat.com/wxdd0fb2f6e79f3d82/devtools/page-frame.html
+---
+2020/03/26 07:32:58 [error] [exception.CException] CException: 属性 "GoodsInfo.goods_picture1" 未被定义. in /usr/local/var/www/snooke/framework/base/CComponent.php:130
+Stack trace:
+#0 /usr/local/var/www/snooke/framework/db/ar/CActiveRecord.php(145): CComponent->__get('goods_picture1')
+#1 /usr/local/var/www/snooke/framework/base/CModel.php(596): CActiveRecord->__get('goods_picture1')
+#2 /usr/local/var/www/snooke/include/functions.php(532): CModel->offsetGet('goods_picture1')
+#3 /usr/local/var/www/snooke/models/GoodsInfo.php(82): toIoArray(Array, 'id,goods_name,g...')
+#4 /usr/local/var/www/snooke/admin/controllers/WxShopController.php(19): GoodsInfo->getInfo(Object(CDbCriteria))
+#5 [internal function]: WxShopController->actionQueryList('1', '5')
+#6 /usr/local/var/www/snooke/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs(Object(WxShopController), Array)
+#7 /usr/local/var/www/snooke/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(WxShopController), Object(ReflectionMethod), Array)
+#8 /usr/local/var/www/snooke/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#9 /usr/local/var/www/snooke/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#10 /usr/local/var/www/snooke/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /usr/local/var/www/snooke/framework/web/CWebApplication.php(282): CController->run('QueryList')
+#12 /usr/local/var/www/snooke/framework/web/CWebApplication.php(141): CWebApplication->runController('WxShop/QueryLis...')
+#13 /usr/local/var/www/snooke/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#14 /usr/local/var/www/snooke/index.php(34): CApplication->run()
+#15 {main}
+REQUEST_URI=/snooke/index.php?r=WxShop/QueryList&page=1&perpage=5
 HTTP_REFERER=https://servicewechat.com/wxdd0fb2f6e79f3d82/devtools/page-frame.html
 ---

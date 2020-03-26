@@ -156,8 +156,8 @@ class MatchController extends BaseController {
         }
     public function actionSubmitChange($vs_id){
            $post=file_get_contents("php://input");
-            $json=json_decode($post,true);
-            put_msg($json);
+           $json=json_decode($post,true);
+           put_msg($json);
            $matchesInfo=Playervs::model()->find(" f_VSid=".$vs_id);
            $matchesInfo->F_WINNUM = $json['all_score'];
            $matchesInfo->F_PLAYNAMEA1 = $json['first_player'];
@@ -174,6 +174,7 @@ class MatchController extends BaseController {
     public function actiongetGameName() {
         
      $rs=GameName::model()->getGameName();
+
         echo json_encode($rs);
     }
   
