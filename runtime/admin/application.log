@@ -8,7 +8,7 @@ Stack trace:
 REQUEST_URI=/snooke/index.php?r=WxShop/QueryList&page=1&perpage=5
 HTTP_REFERER=https://servicewechat.com/wxdd0fb2f6e79f3d82/devtools/page-frame.html
 ---
-2020/03/24 08:31:44 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[HY000]: General error: 1364 Field 'order_good_id' doesn't have a default value. The SQL statement executed was: INSERT INTO `goods_order` (`order_buyer`, `order_location`, `order_price`, `order_goods`, `order_img`, `order_remark`, `order_mobile`, `order_identify`, `order_goods_num`, `order_number`, `order_time`, `order_status`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10, :yp11).
+    2020/03/24 08:31:44 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[HY000]: General error: 1364 Field 'order_good_id' doesn't have a default value. The SQL statement executed was: INSERT INTO `goods_order` (`order_buyer`, `order_location`, `order_price`, `order_goods`, `order_img`, `order_remark`, `order_mobile`, `order_identify`, `order_goods_num`, `order_number`, `order_time`, `order_status`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10, :yp11).
 2020/03/24 08:31:44 [error] [exception.CDbException] CDbException: CDbCommand 无法执行 SQL 语句: SQLSTATE[HY000]: General error: 1364 Field 'order_good_id' doesn't have a default value in /usr/local/var/www/snooke/framework/db/CDbCommand.php:358
 Stack trace:
 #0 /usr/local/var/www/snooke/framework/db/ar/CActiveRecord.php(1083): CDbCommand->execute()
@@ -272,5 +272,193 @@ Stack trace:
 #14 /usr/local/var/www/snooke/index.php(34): CApplication->run()
 #15 {main}
 REQUEST_URI=/snooke/index.php?r=WxShop/QueryList&page=1&perpage=5
+HTTP_REFERER=https://servicewechat.com/wxdd0fb2f6e79f3d82/devtools/page-frame.html
+---
+2020/03/31 10:03:08 [error] [exception.CHttpException.404] CHttpException: 系统无法找到请求的 "GetCategory" 动作. in /usr/local/var/www/snooke/framework/web/CController.php:486
+Stack trace:
+#0 /usr/local/var/www/snooke/framework/web/CController.php(270): CController->missingAction('GetCategory')
+#1 /usr/local/var/www/snooke/framework/web/CWebApplication.php(282): CController->run('GetCategory')
+#2 /usr/local/var/www/snooke/framework/web/CWebApplication.php(141): CWebApplication->runController('WxShop/GetCateg...')
+#3 /usr/local/var/www/snooke/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#4 /usr/local/var/www/snooke/index.php(34): CApplication->run()
+#5 {main}
+REQUEST_URI=/snooke/index.php?r=WxShop/GetCategory
+---
+2020/03/31 10:03:18 [error] [exception.CException] CException: WxShopController and its behaviors do not have a method or closure named "findAll". in /usr/local/var/www/snooke/framework/base/CComponent.php:266
+Stack trace:
+#0 /usr/local/var/www/snooke/admin/controllers/WxShopController.php(136): CComponent->__call('findAll', Array)
+#1 /usr/local/var/www/snooke/framework/web/actions/CInlineAction.php(49): WxShopController->actionGetCategoryList()
+#2 /usr/local/var/www/snooke/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#3 /usr/local/var/www/snooke/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#4 /usr/local/var/www/snooke/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#5 /usr/local/var/www/snooke/framework/web/CWebApplication.php(282): CController->run('GetCategoryList')
+#6 /usr/local/var/www/snooke/framework/web/CWebApplication.php(141): CWebApplication->runController('WxShop/GetCateg...')
+#7 /usr/local/var/www/snooke/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#8 /usr/local/var/www/snooke/index.php(34): CApplication->run()
+#9 {main}
+REQUEST_URI=/snooke/index.php?r=WxShop/GetCategoryList
+---
+2020/03/31 12:43:20 [error] [exception.CHttpException.404] CHttpException: 系统无法找到请求的 "GetCateGory" 动作. in /usr/local/var/www/snooke/framework/web/CController.php:486
+Stack trace:
+#0 /usr/local/var/www/snooke/framework/web/CController.php(270): CController->missingAction('GetCateGory')
+#1 /usr/local/var/www/snooke/framework/web/CWebApplication.php(282): CController->run('GetCateGory')
+#2 /usr/local/var/www/snooke/framework/web/CWebApplication.php(141): CWebApplication->runController('WxShop/GetCateG...')
+#3 /usr/local/var/www/snooke/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#4 /usr/local/var/www/snooke/index.php(34): CApplication->run()
+#5 {main}
+REQUEST_URI=/snooke/index.php?r=WxShop/GetCateGory
+HTTP_REFERER=https://servicewechat.com/wxdd0fb2f6e79f3d82/devtools/page-frame.html
+---
+2020/03/31 13:19:09 [error] [exception.ParseError] ParseError: syntax error, unexpected ';', expecting ')' in /usr/local/var/www/snooke/admin/controllers/WxShopController.php:157
+Stack trace:
+#0 /usr/local/var/www/snooke/framework/web/CWebApplication.php(276): CWebApplication->createController('GetCategoryList...')
+#1 /usr/local/var/www/snooke/framework/web/CWebApplication.php(141): CWebApplication->runController('WxShop/GetCateg...')
+#2 /usr/local/var/www/snooke/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#3 /usr/local/var/www/snooke/index.php(34): CApplication->run()
+#4 {main}
+REQUEST_URI=/snooke/index.php?r=WxShop/GetCategoryList
+---
+2020/04/01 03:50:48 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '7' for key 'PRIMARY'. The SQL statement executed was: UPDATE `goods_shopcar` SET `id`=:yp0, `car_identify_new`=:yp1, `good_price`=:yp2, `good_title`=:yp3, `good_img`=:yp4, `goods_id`=:yp5, `user_identify`=:yp6, `good_num`=:yp7, `selected`=:yp8 WHERE `goods_shopcar`.`id`=8.
+2020/04/01 03:50:48 [error] [exception.CDbException] CDbException: CDbCommand 无法执行 SQL 语句: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '7' for key 'PRIMARY' in /usr/local/var/www/snooke/framework/db/CDbCommand.php:358
+Stack trace:
+#0 /usr/local/var/www/snooke/framework/db/ar/CActiveRecord.php(1756): CDbCommand->execute()
+#1 /usr/local/var/www/snooke/framework/db/ar/CActiveRecord.php(1130): CActiveRecord->updateByPk('8', Array)
+#2 /usr/local/var/www/snooke/framework/db/ar/CActiveRecord.php(811): CActiveRecord->update(NULL)
+#3 /usr/local/var/www/snooke/admin/controllers/WxShopController.php(87): CActiveRecord->save()
+#4 [internal function]: WxShopController->actionCartMinus('8')
+#5 /usr/local/var/www/snooke/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs(Object(WxShopController), Array)
+#6 /usr/local/var/www/snooke/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(WxShopController), Object(ReflectionMethod), Array)
+#7 /usr/local/var/www/snooke/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#8 /usr/local/var/www/snooke/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#9 /usr/local/var/www/snooke/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 /usr/local/var/www/snooke/framework/web/CWebApplication.php(282): CController->run('CartMinus')
+#11 /usr/local/var/www/snooke/framework/web/CWebApplication.php(141): CWebApplication->runController('WxShop/CartMinu...')
+#12 /usr/local/var/www/snooke/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#13 /usr/local/var/www/snooke/index.php(34): CApplication->run()
+#14 {main}
+REQUEST_URI=/snooke/index.php?r=WxShop/CartMinus&id=8
+---
+2020/04/01 05:46:15 [error] [exception.CHttpException.404] CHttpException: 系统无法找到请求的 "CartsMinus" 动作. in /usr/local/var/www/snooke/framework/web/CController.php:486
+Stack trace:
+#0 /usr/local/var/www/snooke/framework/web/CController.php(270): CController->missingAction('CartsMinus')
+#1 /usr/local/var/www/snooke/framework/web/CWebApplication.php(282): CController->run('CartsMinus')
+#2 /usr/local/var/www/snooke/framework/web/CWebApplication.php(141): CWebApplication->runController('WxShop/CartsMin...')
+#3 /usr/local/var/www/snooke/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#4 /usr/local/var/www/snooke/index.php(34): CApplication->run()
+#5 {main}
+REQUEST_URI=/snooke/index.php?r=WxShop/CartsMinus&id=15
+HTTP_REFERER=https://servicewechat.com/wxdd0fb2f6e79f3d82/devtools/page-frame.html
+---
+2020/04/01 05:47:39 [error] [exception.CHttpException.404] CHttpException: 系统无法找到请求的 "CartsMinus" 动作. in /usr/local/var/www/snooke/framework/web/CController.php:486
+Stack trace:
+#0 /usr/local/var/www/snooke/framework/web/CController.php(270): CController->missingAction('CartsMinus')
+#1 /usr/local/var/www/snooke/framework/web/CWebApplication.php(282): CController->run('CartsMinus')
+#2 /usr/local/var/www/snooke/framework/web/CWebApplication.php(141): CWebApplication->runController('WxShop/CartsMin...')
+#3 /usr/local/var/www/snooke/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#4 /usr/local/var/www/snooke/index.php(34): CApplication->run()
+#5 {main}
+REQUEST_URI=/snooke/index.php?r=WxShop/CartsMinus&id=8
+HTTP_REFERER=https://servicewechat.com/wxdd0fb2f6e79f3d82/devtools/page-frame.html
+---
+2020/04/01 07:14:54 [error] [exception.ParseError] ParseError: syntax error, unexpected 'as' (T_AS), expecting ';' in /usr/local/var/www/snooke/admin/controllers/WxShopController.php:126
+Stack trace:
+#0 /usr/local/var/www/snooke/framework/web/CWebApplication.php(276): CWebApplication->createController('QueryList/')
+#1 /usr/local/var/www/snooke/framework/web/CWebApplication.php(141): CWebApplication->runController('WxShop/QueryLis...')
+#2 /usr/local/var/www/snooke/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#3 /usr/local/var/www/snooke/index.php(34): CApplication->run()
+#4 {main}
+REQUEST_URI=/snooke/index.php?r=WxShop/QueryList&page=1&perpage=5
+HTTP_REFERER=https://servicewechat.com/wxdd0fb2f6e79f3d82/devtools/page-frame.html
+---
+2020/04/01 07:16:22 [error] [exception.Error] Error: Call to a member function save() on array in /usr/local/var/www/snooke/admin/controllers/WxShopController.php:129
+Stack trace:
+#0 [internal function]: WxShopController->actionSelectAll('1')
+#1 /usr/local/var/www/snooke/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs(Object(WxShopController), Array)
+#2 /usr/local/var/www/snooke/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(WxShopController), Object(ReflectionMethod), Array)
+#3 /usr/local/var/www/snooke/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /usr/local/var/www/snooke/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#5 /usr/local/var/www/snooke/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /usr/local/var/www/snooke/framework/web/CWebApplication.php(282): CController->run('SelectAll')
+#7 /usr/local/var/www/snooke/framework/web/CWebApplication.php(141): CWebApplication->runController('WxShop/SelectAl...')
+#8 /usr/local/var/www/snooke/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#9 /usr/local/var/www/snooke/index.php(34): CApplication->run()
+#10 {main}
+REQUEST_URI=/snooke/index.php?r=WxShop/SelectAll&selected=1
+HTTP_REFERER=https://servicewechat.com/wxdd0fb2f6e79f3d82/devtools/page-frame.html
+---
+2020/04/01 07:19:16 [error] [exception.Error] Error: Call to a member function save() on array in /usr/local/var/www/snooke/admin/controllers/WxShopController.php:129
+Stack trace:
+#0 [internal function]: WxShopController->actionSelectAll('0')
+#1 /usr/local/var/www/snooke/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs(Object(WxShopController), Array)
+#2 /usr/local/var/www/snooke/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(WxShopController), Object(ReflectionMethod), Array)
+#3 /usr/local/var/www/snooke/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /usr/local/var/www/snooke/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#5 /usr/local/var/www/snooke/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /usr/local/var/www/snooke/framework/web/CWebApplication.php(282): CController->run('SelectAll')
+#7 /usr/local/var/www/snooke/framework/web/CWebApplication.php(141): CWebApplication->runController('WxShop/SelectAl...')
+#8 /usr/local/var/www/snooke/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#9 /usr/local/var/www/snooke/index.php(34): CApplication->run()
+#10 {main}
+REQUEST_URI=/snooke/index.php?r=WxShop/SelectAll&selected=0
+HTTP_REFERER=https://servicewechat.com/wxdd0fb2f6e79f3d82/devtools/page-frame.html
+---
+2020/04/01 07:22:32 [error] [exception.CDbException] CDbException: table "goods_shopcar" 没有任何栏位将被更新. in /usr/local/var/www/snooke/framework/db/schema/CDbCommandBuilder.php:395
+Stack trace:
+#0 /usr/local/var/www/snooke/framework/db/ar/CActiveRecord.php(1755): CDbCommandBuilder->createUpdateCommand(Object(CMysqlTableSchema), Array, Object(CDbCriteria))
+#1 /usr/local/var/www/snooke/framework/db/ar/CActiveRecord.php(1130): CActiveRecord->updateByPk(NULL, Array)
+#2 /usr/local/var/www/snooke/framework/db/ar/CActiveRecord.php(811): CActiveRecord->update(NULL)
+#3 /usr/local/var/www/snooke/admin/controllers/WxShopController.php(129): CActiveRecord->save()
+#4 [internal function]: WxShopController->actionSelectAll('1')
+#5 /usr/local/var/www/snooke/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs(Object(WxShopController), Array)
+#6 /usr/local/var/www/snooke/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(WxShopController), Object(ReflectionMethod), Array)
+#7 /usr/local/var/www/snooke/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#8 /usr/local/var/www/snooke/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#9 /usr/local/var/www/snooke/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 /usr/local/var/www/snooke/framework/web/CWebApplication.php(282): CController->run('SelectAll')
+#11 /usr/local/var/www/snooke/framework/web/CWebApplication.php(141): CWebApplication->runController('WxShop/SelectAl...')
+#12 /usr/local/var/www/snooke/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#13 /usr/local/var/www/snooke/index.php(34): CApplication->run()
+#14 {main}
+REQUEST_URI=/snooke/index.php?r=WxShop/SelectAll&selected=1
+HTTP_REFERER=https://servicewechat.com/wxdd0fb2f6e79f3d82/devtools/page-frame.html
+---
+2020/04/01 07:27:57 [error] [exception.Error] Error: Call to a member function save() on array in /usr/local/var/www/snooke/admin/controllers/WxShopController.php:129
+Stack trace:
+#0 [internal function]: WxShopController->actionSelectAll('1')
+#1 /usr/local/var/www/snooke/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs(Object(WxShopController), Array)
+#2 /usr/local/var/www/snooke/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(WxShopController), Object(ReflectionMethod), Array)
+#3 /usr/local/var/www/snooke/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /usr/local/var/www/snooke/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#5 /usr/local/var/www/snooke/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /usr/local/var/www/snooke/framework/web/CWebApplication.php(282): CController->run('SelectAll')
+#7 /usr/local/var/www/snooke/framework/web/CWebApplication.php(141): CWebApplication->runController('WxShop/SelectAl...')
+#8 /usr/local/var/www/snooke/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#9 /usr/local/var/www/snooke/index.php(34): CApplication->run()
+#10 {main}
+REQUEST_URI=/snooke/index.php?r=WxShop/SelectAll&selected=1
+HTTP_REFERER=https://servicewechat.com/wxdd0fb2f6e79f3d82/devtools/page-frame.html
+---
+2020/04/01 08:12:08 [error] [exception.ParseError] ParseError: syntax error, unexpected '{' in /usr/local/var/www/snooke/admin/controllers/WxShopController.php:62
+Stack trace:
+#0 /usr/local/var/www/snooke/framework/web/CWebApplication.php(276): CWebApplication->createController('QueryList/')
+#1 /usr/local/var/www/snooke/framework/web/CWebApplication.php(141): CWebApplication->runController('WxShop/QueryLis...')
+#2 /usr/local/var/www/snooke/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#3 /usr/local/var/www/snooke/index.php(34): CApplication->run()
+#4 {main}
+REQUEST_URI=/snooke/index.php?r=WxShop/QueryList&page=1&perpage=5
+HTTP_REFERER=https://servicewechat.com/wxdd0fb2f6e79f3d82/devtools/page-frame.html
+---
+2020/04/02 02:10:07 [error] [exception.Error] Error: Call to a member function deleteAll() on null in /usr/local/var/www/snooke/admin/controllers/WxShopController.php:225
+Stack trace:
+#0 /usr/local/var/www/snooke/framework/web/actions/CInlineAction.php(49): WxShopController->actionCreateNewOrders()
+#1 /usr/local/var/www/snooke/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#2 /usr/local/var/www/snooke/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#3 /usr/local/var/www/snooke/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#4 /usr/local/var/www/snooke/framework/web/CWebApplication.php(282): CController->run('CreateNewOrders')
+#5 /usr/local/var/www/snooke/framework/web/CWebApplication.php(141): CWebApplication->runController('WxShop/CreateNe...')
+#6 /usr/local/var/www/snooke/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#7 /usr/local/var/www/snooke/index.php(34): CApplication->run()
+#8 {main}
+REQUEST_URI=/snooke/index.php?r=WxShop/CreateNewOrders
 HTTP_REFERER=https://servicewechat.com/wxdd0fb2f6e79f3d82/devtools/page-frame.html
 ---

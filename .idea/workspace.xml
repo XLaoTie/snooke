@@ -3,7 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="ff72f386-0f5a-4688-ae5d-843d30253d3c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/include/config.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/controllers/WxShopController.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/controllers/WxShopController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runtime/admin/application.log" beforeDir="false" afterPath="$PROJECT_DIR$/runtime/admin/application.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,7 +58,10 @@
       <workItem from="1582709653063" duration="10296000" />
       <workItem from="1583497196986" duration="10386000" />
       <workItem from="1583599648388" duration="13000" />
-      <workItem from="1584683246792" duration="35101000" />
+      <workItem from="1584683246792" duration="43353000" />
+      <workItem from="1585713547648" duration="247000" />
+      <workItem from="1585717141597" duration="4681000" />
+      <workItem from="1585745869050" duration="5271000" />
     </task>
     <task id="LOCAL-00001" summary="first">
       <created>1582474569638</created>
@@ -81,9 +85,10 @@
       <screen x="49" y="23" width="1391" height="877" />
     </state>
     <state x="331" y="66" key="CommitChangelistDialog2/49.23.1391.877@49.23.1391.877" timestamp="1582474569365" />
-    <state x="402" y="296" key="com.intellij.ide.util.TipDialog" timestamp="1583599648352">
-      <screen x="49" y="23" width="1391" height="877" />
+    <state x="365" y="280" key="com.intellij.ide.util.TipDialog" timestamp="1585717172131">
+      <screen x="0" y="23" width="1440" height="826" />
     </state>
+    <state x="365" y="280" key="com.intellij.ide.util.TipDialog/0.23.1440.826@0.23.1440.826" timestamp="1585717172131" />
     <state x="399" y="296" key="com.intellij.ide.util.TipDialog/48.23.1392.877@48.23.1392.877" timestamp="1583497198395" />
     <state x="402" y="296" key="com.intellij.ide.util.TipDialog/49.23.1391.877@49.23.1391.877" timestamp="1583599648352" />
     <state x="400" y="296" key="com.intellij.ide.util.TipDialog/52.23.1388.877@52.23.1388.877" timestamp="1582360100299" />

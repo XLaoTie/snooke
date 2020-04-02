@@ -52,16 +52,28 @@ class WxShopController extends BaseController {
    public function actionAddToShopcar(){
       $post=file_get_contents("php://input");
       $json=json_decode($post,true);
-       put_msg($json);
-      $model = new GoodsShopcar();
-      $model->car_identify_new=$json['car_identify_new'];
-      $model->good_price=$json['good_price'];
-      $model->good_title=$json['good_title'];
-      $model->good_img=$json['good_img'];
-      $model->goods_id=$json['goods_id'];
-      $model->user_identify=$json['user_identify'];
-      $status=$model->save();
-      $data['status']=$status;
+      //查看购物车是否存在同件商品
+      $criteria=new CDbCriteria;
+      $criteria->condition='goods_id='.$json['goods_id'];
+      $tmp=GoodsShopcar::model()->find($criteria);
+
+
+
+      if(empty($tmp)){
+          $model = new GoodsShopcar();
+          $model->car_identify_new=$json['car_identify_new'];
+          $model->good_price=$json['good_price'];
+          $model->good_title=$json['good_title'];
+          $model->good_img=$json['good_img'];
+          $model->goods_id=$json['goods_id'];
+          $model->user_identify=$json['user_identify'];
+          $status=$model->save();
+          $data['status']=$status;
+      }
+      else{
+          $tmp->good_num = $tmp->good_num+1;
+         $data['status']= $tmp->save();
+      }
       echo CJSON::encode($data);
 
    }
@@ -77,6 +89,70 @@ class WxShopController extends BaseController {
         $rs= array('code'=>'0','msg'=>'正常','data'=>$r1);
         echo CJSON::encode($rs);
    }
+   //购物车一系列操作
+   public function actionCartMinus($id){
+        $model=GoodsShopcar::model();
+        $criteria=new CDbCriteria;
+        $criteria->condition='id='.$id;
+        $tmp=$model->find($criteria);
+        $tmp->good_num=$tmp->good_num-1;
+        $s=$tmp->save();
+        $rs= array('code'=>'0','msg'=>'正常','status'=>$s);
+        echo CJSON::encode($rs);
+   }
+   public function actionCartPlus($id){
+        $model=GoodsShopcar::model();
+        $criteria=new CDbCriteria;
+        $criteria->condition='id='.$id;
+        $tmp=$model->find($criteria);
+        $tmp->good_num=$tmp->good_num+1;
+        $s=$tmp->save();
+        $rs= array('code'=>'0','msg'=>'正常','status'=>$s);
+        echo CJSON::encode($rs);
+   }
+   public function actionCartManual($id,$num){
+        $model=GoodsShopcar::model();
+        $criteria=new CDbCriteria;
+        $criteria->condition='id='.$id;
+        $tmp=$model->find($criteria);
+        $tmp->good_num=$num;
+        $s=$tmp->save();
+        $rs= array('code'=>'0','msg'=>'正常','status'=>$s);
+        echo CJSON::encode($rs);
+   }
+   public function actionCheckbox($id,$selected){
+        $model=GoodsShopcar::model();
+        $criteria=new CDbCriteria;
+        $criteria->condition='id='.$id;
+        $tmp=$model->find($criteria);
+        $tmp->selected=$selected;
+        $s=$tmp->save();
+        $rs= array('code'=>'0','msg'=>'正常','status'=>$s);
+        echo CJSON::encode($rs);
+   }
+   public function actionSelectAll($selected){
+        $model=GoodsShopcar::model();
+        $criteria=new CDbCriteria;
+        $criteria->condition=1;
+        $tmp=$model->findAll($criteria);
+
+        foreach($tmp as $k=>$v){
+        $v['selected']=$selected;
+        $v->save();
+        }
+
+        $rs= array('code'=>'0','msg'=>'正常','status'=>$s);
+        echo CJSON::encode($rs);
+   }
+    public function actionDelete($id){
+         $model=GoodsShopcar::model();
+         $criteria=new CDbCriteria;
+         $criteria->condition='id='.$id;
+         $tmp=$model->deleteAll($criteria);
+
+         $rs= array('code'=>'0','msg'=>'正常','status'=>$tmp);
+         echo CJSON::encode($rs);
+    }
   //创建新订单
        public function actionCreateNewOrder(){
           $post=file_get_contents("php://input");
@@ -98,6 +174,59 @@ class WxShopController extends BaseController {
           $model->order_status=1;
           $status=$model->save();
           $data['status']=$status;
+          echo CJSON::encode($data);
+       }
+       public function actionCreateNewOrders(){
+          $post=file_get_contents("php://input");
+          $json=json_decode($post,true);
+
+         $tmp=$json['order_goodsinfo'];
+         $order_number=time().rand(100, 999);
+         $order_time=date('Y-m-d H:i:s');
+         $cartDeleteId=array();
+         foreach($tmp as $k=>$v){
+           $model = new GoodsOrder;
+           $model->isNewRecord = true;
+           $model->order_buyer=$json['order_buyer'];
+           $model->order_location=$json['order_location'];
+           $model->order_remark=$json['order_remark'];
+           $model->order_mobile=$json['order_mobile'];
+           $model->order_identify=$json['order_identify'];
+           $model->order_number= $order_number;
+           $model->order_time=$order_time;
+           $model->order_status=1;
+
+           $model->order_price=$v['price'];
+           $model->order_goods=$v['title'];
+           $model->order_good_id=$v['goods_id'];
+           $model->order_img=$v['img'];
+           $model->order_goods_num=$v['quantity'];
+
+           //保存要删除的购物车id
+            $cartDeleteId[]=$v['id'];
+
+           $status=$model->save();
+           if(!$status) $data['status']=$status;
+         }
+         //删除购物车数据操作
+        $cart=GoodsShopcar::model();
+         $criteria = new CDbCriteria;
+        $i=1;
+        $s='';
+        foreach($cartDeleteId as $id){
+
+           if($i==1){
+                $s='id='.$id;
+                $i=$i+1;
+           }
+           else{
+                $s.=' OR id='.$id;
+           }
+
+        }
+        $criteria->condition=$s;
+        $cart->deleteAll($criteria);
+
           echo CJSON::encode($data);
        }
       public function actionQueryMyOrderList($order_identify="",$order_status=-1,$order_id=0){
@@ -130,11 +259,33 @@ class WxShopController extends BaseController {
         $rs= array('code'=>'0','msg'=>'正常','data'=>$r1);
         echo CJSON::encode($rs);
     }
-    public function actionPostMoment(){
+    //获取分类列表
+    public function actionGetCategoryList(){
+       $model=GoodsInfo::model();
+    	$criteria = new CDbCriteria;
+        $criteria->condition=1;
+        $tmp=$model->findAll($criteria);
+         $r1=array();$r0=array();$r2=array();
+        foreach($tmp as $k => $v){
+            $type=$v['type'];
+            if(!isset($r0[$type])) {
+                $r0[$type]=$type;
+                $r2[]=$type;
 
+                $r1[$type]=array();
+             }
+          //   put_msg($v);
+            $r1[$type][]=
+               array(
+                'id'=>$v['id'],
+               'name'=>$v['goods_name'],
+                'img'=>$v['goods_titlepage'],
+                'price'=>$v['goods_price'],
 
-
-
+              );
+            };
+         $rs= array('code'=>'0','msg'=>'正常','data'=>array('goods'=>$r1,'type'=>$r2));
+         echo CJSON::encode($rs);
     }
 
 }
