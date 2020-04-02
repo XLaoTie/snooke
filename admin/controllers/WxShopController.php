@@ -135,10 +135,11 @@ class WxShopController extends BaseController {
         $criteria=new CDbCriteria;
         $criteria->condition=1;
         $tmp=$model->findAll($criteria);
-        $s=0;
+        $s=true;
         foreach($tmp as $k=>$v){
         $v['selected']=$selected;
-        $s=$v->save();
+         $s=$v->save();
+         if($s==false) $s=false;
         }
 
         $rs= array('code'=>'0','msg'=>'正常','status'=>$s);
