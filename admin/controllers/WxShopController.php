@@ -135,7 +135,7 @@ class WxShopController extends BaseController {
         $criteria=new CDbCriteria;
         $criteria->condition=1;
         $tmp=$model->findAll($criteria);
-
+        $s=0;
         foreach($tmp as $k=>$v){
         $v['selected']=$selected;
         $s=$v->save();

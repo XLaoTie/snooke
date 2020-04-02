@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ff72f386-0f5a-4688-ae5d-843d30253d3c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/controllers/WxShopController.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/controllers/WxShopController.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -60,7 +59,7 @@
       <workItem from="1584683246792" duration="43353000" />
       <workItem from="1585713547648" duration="247000" />
       <workItem from="1585717141597" duration="4681000" />
-      <workItem from="1585745869050" duration="7569000" />
+      <workItem from="1585745869050" duration="7680000" />
     </task>
     <task id="LOCAL-00001" summary="first">
       <created>1582474569638</created>
