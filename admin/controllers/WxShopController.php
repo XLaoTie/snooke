@@ -138,7 +138,7 @@ class WxShopController extends BaseController {
 
         foreach($tmp as $k=>$v){
         $v['selected']=$selected;
-        $v->save();
+        $s=$v->save();
         }
 
         $rs= array('code'=>'0','msg'=>'正常','status'=>$s);
